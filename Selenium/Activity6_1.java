@@ -27,6 +27,7 @@ public class Activity6_1 {
 		wait.until(ExpectedConditions.visibilityOf(chkbox));
 		System.out.println("Checkbox displayed" + chkbox.isDisplayed());
 		chkbox.click();
+		driver.close();
 		
 		
 		
