@@ -1,0 +1,16 @@
+import pandas
+
+dataframe = pandas.read_csv("C:\\Rupal\\IBM Training SDET\\SDET PythonFolder\\Activity17.csv")
+print("FullData:")
+print(dataframe)
+print("=============")
+print("Usernames:")
+print(dataframe["Usernames"])
+print("=======================")
+print("Username: ", dataframe["Usernames"][1],"|", "Passwords: ", dataframe["Passwords"][1])
+print("==========================")
+print("Data sorted in ascending order")
+print(dataframe.sort_values('Usernames'))
+print("=========================")
+print("Data sorted in descending order")
+print(dataframe.sort_values('Passwords',ascending=False))
