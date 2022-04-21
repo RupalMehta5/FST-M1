@@ -18,3 +18,18 @@ INSERT ALL
     INTO orders VALUES(70011, 75.29, TO_DATE('2012/08/17', 'YYYY/MM/DD'), 3003, 5007)
     INTO orders VALUES(70013, 3045.6, TO_DATE('2012/04/25', 'YYYY/MM/DD'), 3002, 5001)
 SELECT 1 FROM DUAL;
+
+-- Get all salesman ids without any repeated values
+select distinct salesman_id from orders;
+
+-- Display the order number ordered by date in ascending order
+select order_no, order_date from orders order by order_date;
+
+-- Display the order number ordered by purchase amount in descending order
+select order_no, purchase_amount from orders order by purchase_amount DESC;
+
+-- Display the full data of orders that have purchase amount less than 500.
+select * from orders where purchase_amount < 500;
+
+-- Display the full data of orders that have purchase amount between 1000 and 2000.
+select * from orders where purchase_amount between 1000 and 2000;
